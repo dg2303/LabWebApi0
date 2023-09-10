@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using LabWebAPI0.Database;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddRepositories();
+builder.Services.AddDbContext("Server=localhost;Database=master;Trusted_Connection=True;Initial Catalog=LabWebApi0;TrustServerCertificate=True;");
+
+
 builder.Services.AddSpaStaticFiles(configuration =>
 {
     configuration.RootPath = "ClientApp/dist";
@@ -14,7 +18,6 @@ builder.Services.AddSpaStaticFiles(configuration =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -22,9 +25,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseAuthorization();
 
-app.MapControllers();
+app.UseStaticFiles();
+
+app.UseRouting();
 
 app.UseCors(c =>
 {
@@ -35,7 +39,10 @@ app.UseCors(c =>
 
 app.UseAuthorization();
 
-
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.UseSpa(spa =>
 {
@@ -43,5 +50,5 @@ app.UseSpa(spa =>
     spa.UseAngularCliServer(npmScript: "start");
 });
 
-
 app.Run();
+

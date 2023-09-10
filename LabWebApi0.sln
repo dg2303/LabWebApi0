@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabWebApi0.Web", "LabWebApi0.Web\LabWebApi0.Web.csproj", "{F5A72DF3-9D19-44A9-8D33-59DFBDFF1BB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabWebApi0.Web", "LabWebApi0.Web\LabWebApi0.Web.csproj", "{F5A72DF3-9D19-44A9-8D33-59DFBDFF1BB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{AAD28263-4A9D-475C-AA89-DE580586013A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{456AFF70-3325-4553-80BF-C7E35F036ABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabWebAPI0.Contracts", "LabWebAPI0.Contracts\LabWebAPI0.Contracts.csproj", "{BB7B9DEF-3B4D-4702-934C-7BFA92F104EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabWebAPI0.Database", "LabWebAPI0.Database\LabWebAPI0.Database.csproj", "{F16ABA4D-8C13-4963-AF90-F3852BEFCEB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabWebAPI0.Services", "LabWebAPI0.Services\LabWebAPI0.Services.csproj", "{12E3EA27-EAE2-4BD7-BAEB-4D64396BDE11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +25,26 @@ Global
 		{F5A72DF3-9D19-44A9-8D33-59DFBDFF1BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5A72DF3-9D19-44A9-8D33-59DFBDFF1BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5A72DF3-9D19-44A9-8D33-59DFBDFF1BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB7B9DEF-3B4D-4702-934C-7BFA92F104EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB7B9DEF-3B4D-4702-934C-7BFA92F104EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB7B9DEF-3B4D-4702-934C-7BFA92F104EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB7B9DEF-3B4D-4702-934C-7BFA92F104EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F16ABA4D-8C13-4963-AF90-F3852BEFCEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16ABA4D-8C13-4963-AF90-F3852BEFCEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16ABA4D-8C13-4963-AF90-F3852BEFCEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16ABA4D-8C13-4963-AF90-F3852BEFCEB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E3EA27-EAE2-4BD7-BAEB-4D64396BDE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E3EA27-EAE2-4BD7-BAEB-4D64396BDE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E3EA27-EAE2-4BD7-BAEB-4D64396BDE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E3EA27-EAE2-4BD7-BAEB-4D64396BDE11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB7B9DEF-3B4D-4702-934C-7BFA92F104EE} = {AAD28263-4A9D-475C-AA89-DE580586013A}
+		{F16ABA4D-8C13-4963-AF90-F3852BEFCEB0} = {456AFF70-3325-4553-80BF-C7E35F036ABE}
+		{12E3EA27-EAE2-4BD7-BAEB-4D64396BDE11} = {456AFF70-3325-4553-80BF-C7E35F036ABE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D821D2AF-9A30-4F9A-83FF-5587A2904DD9}

@@ -12,4 +12,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LabWebAPI0.Database\LabWebAPI0.Database.csproj" />
+  </ItemGroup>
+
 </Project>
